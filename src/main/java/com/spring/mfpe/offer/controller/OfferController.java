@@ -41,7 +41,8 @@ public class OfferController {
 	 * @throws MicroserviceException
 	 * @throws InvalidTokenException
 	 */
-	@CrossOrigin(origins = "http://localhost:4200")
+// 	@CrossOrigin(origins = "http://localhost:4200")
+	@CrossOrigin(origins = "http://pod5-mfpe.s3-website-us-west-2.amazonaws.com")
 	@GetMapping("/getOfferDetails/{offerId}")
 	public Offer getOfferDetails(@RequestHeader("Authorization") String token, @PathVariable("offerId") int offerId)
 			throws OfferNotFoundException, InvalidTokenException, MicroserviceException {
@@ -59,7 +60,8 @@ public class OfferController {
 	 * @throws OfferNotFoundException
 	 * @throws MicroserviceException
 	 */
-	@CrossOrigin(origins = "http://localhost:4200")
+// 	@CrossOrigin(origins = "http://localhost:4200")
+	@CrossOrigin(origins = "http://pod5-mfpe.s3-website-us-west-2.amazonaws.com")
 	@GetMapping("/getOfferByCategory/{category}")
 	public List<Offer> getOfferByCategory(@RequestHeader("Authorization") String token,
 			@PathVariable("category") String category)
@@ -77,7 +79,8 @@ public class OfferController {
 	 * @throws MicroserviceException
 	 * @throws InvalidTokenException
 	 */
-	@CrossOrigin(origins = "http://localhost:4200")
+// 	@CrossOrigin(origins = "http://localhost:4200")
+	@CrossOrigin(origins = "http://pod5-mfpe.s3-website-us-west-2.amazonaws.com")
 	@GetMapping("/getOfferByTopLikes")
 	public List<Offer> getOfferByTopLikes(@RequestHeader("Authorization") String token)
 			throws OfferNotFoundException, InvalidTokenException, MicroserviceException {
@@ -96,7 +99,8 @@ public class OfferController {
 	 * @throws MicroserviceException
 	 * @throws InvalidTokenException
 	 */
-	@CrossOrigin(origins = "http://localhost:4200")
+// 	@CrossOrigin(origins = "http://localhost:4200")
+	@CrossOrigin(origins = "http://pod5-mfpe.s3-website-us-west-2.amazonaws.com")
 	@GetMapping("/getOfferByPostedDate/{date}")
 	public List<Offer> getOfferByPostedDate(@RequestHeader("Authorization") String token,
 			@PathVariable("date") String postedDate)
@@ -118,7 +122,8 @@ public class OfferController {
 	 * @throws MicroserviceException
 	 * @throws InvalidTokenException
 	 */
-	@CrossOrigin(origins = "http://localhost:4200")
+// 	@CrossOrigin(origins = "http://localhost:4200")
+	@CrossOrigin(origins = "http://pod5-mfpe.s3-website-us-west-2.amazonaws.com")
 	@PostMapping("/engageOffer")
 	public SuccessResponse engageOffer(@RequestHeader("Authorization") String token,
 			@RequestParam(name = "offerId") int offerId, @RequestParam(name = "employeeId") int employeeId)
@@ -138,7 +143,8 @@ public class OfferController {
 	 * @throws MicroserviceException
 	 * @throws InvalidTokenException
 	 */
-	@CrossOrigin(origins = "http://localhost:4200")
+// 	@CrossOrigin(origins = "http://localhost:4200")
+	@CrossOrigin(origins = "http://pod5-mfpe.s3-website-us-west-2.amazonaws.com")
 	@PostMapping("/editOffer")
 	public SuccessResponse editOffer(@RequestHeader("Authorization") String token, @RequestBody Offer offer)
 			throws OfferNotFoundException, InvalidTokenException, MicroserviceException {
@@ -156,7 +162,8 @@ public class OfferController {
 	 * @throws MicroserviceException
 	 * @throws InvalidTokenException
 	 */
-	@CrossOrigin(origins = "http://localhost:4200")
+// 	@CrossOrigin(origins = "http://localhost:4200")
+	@CrossOrigin(origins = "http://pod5-mfpe.s3-website-us-west-2.amazonaws.com")
 	@PostMapping("/addOffer")
 	public SuccessResponse addOffer(@RequestHeader("Authorization") String token, @RequestBody Offer offer)
 			throws EmployeeNotFoundException, InvalidTokenException, MicroserviceException {
@@ -211,7 +218,8 @@ public class OfferController {
 	 * @throws OfferNotFoundException
 	 * @throws MicroserviceException
 	 */
-	@CrossOrigin(origins = "http://localhost:4200")
+// 	@CrossOrigin(origins = "http://localhost:4200")
+	@CrossOrigin(origins = "http://pod5-mfpe.s3-website-us-west-2.amazonaws.com")
 	@PostMapping("/updateLikes/{offer_id}")
 	public SuccessResponse updateLikes(@RequestHeader("Authorization") String token, @PathVariable("offer_id") int id)
 			throws MicroserviceException, OfferNotFoundException {
